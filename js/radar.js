@@ -16,11 +16,11 @@ class RadarChart {
         this.parent.appendChild(this.container);
 
         this.ctx = this.canvas.getContext('2d');
-        this.drawChart(this.ctx, data);
+        this.chart = this.drawChart(this.ctx, data);
     }
 
     drawChart(ctx, data) {
-        var myChart = new Chart(ctx, {
+        return new Chart(ctx, {
             type: 'radar',
             data: data,
             responsive: true,
@@ -35,5 +35,10 @@ class RadarChart {
             },
         });
     }
+
+    update() {
+        this.chart.update();
+    }
+
 
 }
