@@ -304,10 +304,13 @@ const addClick = (e) => {
 addCharacter.addEventListener("click", addClick);
 
 const deleteClick = (e) => {
-  if (characters.length <= 1)
-    return;
-  characters.splice(currIndex, 1);
-  currIndex = 0;
+  if (characters.length > 0) {
+    characters.splice(currIndex, 1);
+  }
+  currIndex = Math.max(currIndex - 1, 0);
+  if (characters.length == 0) {
+    characters.push(new Character("", getRanRGB(), 75, 75, 75, 75, 75, 75));
+  }
   setupCharacterSettings();
   e.preventDefault();
 }
