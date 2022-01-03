@@ -261,6 +261,12 @@ colorPicker.addEventListener("change", colorChange);
 
 const update = () => {
   radarChart.chart.data.datasets = characters.map((c) => c.convert());
+  const canvas = document.querySelector(".chartjs-render-monitor");
+  if (canvas && canvas.clear) {
+    canvas.clear();
+    const context = canvas.getContext('2d');  
+    context.clearRect(0, 0, canvas.width, canvas.height);
+  }
   radarChart.chart.update();
 };
 
