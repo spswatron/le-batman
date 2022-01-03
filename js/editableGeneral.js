@@ -4,6 +4,7 @@ const nameLabel = document.getElementById("character-name");
 const colorPicker = document.getElementById("color-picker");
 const addButton = document.getElementById("add-character");
 const deleteButton = document.getElementById("delete-character");
+const downloadButton = document.getElementById("download-chart");
 let currIndex = 0;
 
 //general hex to rgb/rgb to hex utility conversion functions
@@ -77,7 +78,7 @@ const defaultData = (fieldSize, max = 100) => {
 };
 
 //the max should be an integer
-const setUpFields = (fieldList, datapoints, chart, max) => {
+const setUpFields = (fieldList, datapoints, chart, title, max) => {
   //update function for updating radar chart
   const update = () => {
     chart.chart.data.datasets = datapoints.map((c) => c.convert());
@@ -191,6 +192,15 @@ const setUpFields = (fieldList, datapoints, chart, max) => {
     update();
   };
   deleteButton.addEventListener("click", deleteClick);
+  //TODO: set up download button
+  const downloadClick = (e) => {
+    const dataUrl = chart.chart.toBase64Image('image/jpeg', 1)
+    const link = document.createElement('a');
+    link.download = title + ".jpeg";
+    link.href = dataUrl;
+    link.click();
+  }
+  downloadButton.addEventListener("click", downloadClick);
 };
 
 const getRanRGB = () => {
@@ -224,6 +234,6 @@ const generalSetup = (title, fieldList, datapoints, max = 100) => {
   };
 
   const radarChart = new RadarChart(container, data, title);
-  setUpFields(fieldList, datapoints, radarChart, max);
+  setUpFields(fieldList, datapoints, radarChart, title, max);
   return radarChart;
 };

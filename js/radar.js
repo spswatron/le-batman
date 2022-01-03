@@ -1,6 +1,7 @@
 class RadarChart {
   constructor(parent, data, title = "") {
     this.container = document.createElement("div");
+    this.container.id = "radar-container";
     this.container.className = "radar-container";
     this.canvas = document.createElement("CANVAS");
     this.title = document.createElement("H1");
@@ -18,6 +19,14 @@ class RadarChart {
   }
 
   drawChart(ctx, data) {
+    Chart.plugins.register({
+      beforeDraw: function(chartInstance) {
+        var ctx = chartInstance.chart.ctx;
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, chartInstance.chart.width, chartInstance.chart.height);
+      }
+    });
+    
     return new Chart(ctx, {
       type: "radar",
       data: data,
