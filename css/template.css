@@ -1,7 +1,17 @@
-html, body, h1, h2, h3, h4, h5, h6, p, input, button {
-    font-family: 'Poppins', sans-serif;
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+button {
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
-    font-weight: bold;
+  font-weight: bold;
 }

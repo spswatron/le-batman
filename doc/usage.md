@@ -1,5 +1,5 @@
-[HTML5 Boilerplate homepage](https://html5boilerplate.com/) | [Documentation
-table of contents](TOC.md)
+[HTML5 Boilerplate homepage](https://html5boilerplate.com/) |
+[Documentation table of contents](TOC.md)
 
 # Usage
 
@@ -59,8 +59,8 @@ What follows is a general overview of each major part and how to use them.
 ### css
 
 This directory should contain all your project's CSS files. It includes some
-initial CSS to help get you started from a solid foundation. [About the
-CSS](css.md).
+initial CSS to help get you started from a solid foundation.
+[About the CSS](css.md).
 
 ### doc
 
@@ -76,12 +76,12 @@ get you started. [About the JavaScript](js.md).
 ### .htaccess
 
 The default web server configs are for Apache. For more information, please
-refer to the [Apache Server Configs
-repository](https://github.com/h5bp/server-configs-apache).
+refer to the
+[Apache Server Configs repository](https://github.com/h5bp/server-configs-apache).
 
 Host your site on a server other than Apache? You're likely to find the
-corresponding server configs project listed in our [Server
-Configs](https://github.com/h5bp/server-configs/blob/master/README.md)
+corresponding server configs project listed in our
+[Server Configs](https://github.com/h5bp/server-configs/blob/master/README.md)
 repository.
 
 ### 404.html
@@ -92,8 +92,8 @@ A helpful custom 404 to get you started.
 
 This file contains all settings regarding custom tiles for IE11 and Edge.
 
-For more info on this topic, please refer to [Microsoft's
-Docs](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/dn320426(v=vs.85)).
+For more info on this topic, please refer to
+[Microsoft's Docs](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/dn320426(v=vs.85)>).
 
 ### .editorconfig
 
@@ -120,8 +120,8 @@ technology powering it.
 
 ### package.json
 
-Edit this file to describe your application, add dependencies, scripts and
-other properties related to node based development and the npm registry
+Edit this file to describe your application, add dependencies, scripts and other
+properties related to node based development and the npm registry
 
 ### robots.txt
 

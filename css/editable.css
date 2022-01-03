@@ -1,7 +1,90 @@
-.characters-editable {
-    padding: 0 5%;
+body {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
 }
 
-button, input, optgroup, select, textarea {
-    font-family: 'Poppins' sans-serif;
+canvas {
+  background-color: white;
+}
+
+.body-container {
+  flex: 1;
+}
+
+h1 {
+  margin-top: 40px;
+}
+
+.uk-margin {
+  margin: 13px 0 !important;
+}
+
+.options-container {
+  min-width: 300px;
+  padding: 1rem;
+  padding-top: 40px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.options-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-bottom: 18px;
+}
+
+.options-top h3 {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.range-combo {
+  display: flex;
+}
+
+.range-combo .uk-range {
+  flex: 5;
+  padding-right: 1rem;
+}
+
+.range-combo .uk-input {
+  flex: 1;
+}
+
+.top-button-row {
+  position: absolute;
+  right: 0;
+}
+
+.add-button {
+  margin-right: 0.5rem;
+}
+
+.add-button:hover,
+.download-button:hover {
+  cursor: pointer;
+}
+
+.final-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.final-row button {
+  color: #f0506e;
+  border: 0.5px solid rgba(240, 80, 110, 0.5);
+}
+
+.options-header {
+  text-align: center;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: "Poppins" sans-serif;
 }
