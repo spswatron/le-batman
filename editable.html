@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8" />
-    <title>Editable Batman</title>
+    <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -12,8 +12,7 @@
     <meta property="og:image" content="" />
 
     <link rel="manifest" href="site.webmanifest" />
-    <link rel="apple-touch-icon" href="icon.png" />
-    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="catcher.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +24,6 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/radar.css" />
-    <link rel="stylesheet" href="css/editable.css" />
     <meta name="theme-color" content="#fafafa" />
     <!-- UIkit CSS -->
     <link
@@ -41,7 +39,7 @@
 
     <div class="options-container">
       <div class="options-top">
-        <h3 class="options-header">Cast</h3>
+        <h3 class="options-header">Works</h3>
         <div class="top-button-row">
           <buton id="add-character" class="add-button"
             ><img class="plus-icon" src="/icons/plus.svg"
@@ -72,157 +70,21 @@
           </div>
         </div>
 
-        <div class="uk-margin">
-          <label class="uk-form-label" for="form-stacked-text"
-            >Fanbase goes aaah</label
-          >
-          <div class="range-combo uk-form-controls">
-            <input
-              class="uk-range"
-              id="fanbase-score"
-              type="range"
-              value="2"
-              min="0"
-              max="10"
-              step="0.1"
-            />
-            <input
-              id="fanbase-num"
-              class="uk-input uk-form-width-mini"
-              type="number"
-              min="0"
-              max="100"
-            />
-          </div>
-        </div>
-
-        <div class="uk-margin">
-          <label class="uk-form-label" for="form-stacked-text"
-            >Brooder Scooter</label
-          >
-          <div class="range-combo uk-form-controls">
-            <input
-              class="uk-range"
-              id="brooder-score"
-              type="range"
-              value="2"
-              min="0"
-              max="10"
-              step="0.1"
-            />
-            <input
-              id="brooder-num"
-              class="uk-input uk-form-width-mini"
-              type="number"
-              min="0"
-              max="100"
-            />
-          </div>
-        </div>
-
-        <div class="uk-margin">
-          <label class="uk-form-label" for="form-stacked-text"
-            >Self-righteous Felt Righteous</label
-          >
-          <div class="range-combo uk-form-controls">
-            <input
-              class="uk-range"
-              id="righteous-score"
-              type="range"
-              value="2"
-              min="0"
-              max="10"
-              step="0.1"
-            />
-            <input
-              id="righteous-num"
-              class="uk-input uk-form-width-mini"
-              type="number"
-              min="0"
-              max="100"
-            />
-          </div>
-        </div>
-
-        <div class="uk-margin">
-          <label class="uk-form-label" for="form-stacked-text"
-            >Biggest Brain</label
-          >
-          <div class="range-combo uk-form-controls">
-            <input
-              class="uk-range"
-              id="brain-score"
-              type="range"
-              value="2"
-              min="0"
-              max="10"
-              step="0.1"
-            />
-            <input
-              id="brain-num"
-              class="uk-input uk-form-width-mini"
-              type="number"
-              min="0"
-              max="100"
-            />
-          </div>
-        </div>
-
-        <div class="uk-margin">
-          <label class="uk-form-label" for="form-stacked-text"
-            >Be Abrasive</label
-          >
-          <div class="range-combo uk-form-controls">
-            <input
-              class="uk-range"
-              id="abrasive-score"
-              type="range"
-              value="2"
-              min="0"
-              max="10"
-              step="0.1"
-            />
-            <input
-              id="abrasive-num"
-              class="uk-input uk-form-width-mini"
-              type="number"
-              min="0"
-              max="100"
-            />
-          </div>
-        </div>
-
-        <div class="uk-margin">
-          <label class="uk-form-label" for="form-stacked-text"
-            >Justification of ?Questionable? Methods</label
-          >
-          <div class="range-combo uk-form-controls">
-            <input
-              class="uk-range"
-              id="justif-score"
-              type="range"
-              value="2"
-              min="0"
-              max="10"
-              step="0.1"
-            />
-            <input
-              id="justif-num"
-              class="uk-input uk-form-width-mini"
-              type="number"
-              min="0"
-              max="100"
-            />
-          </div>
-        </div>
+        <div id="field-container"></div>
 
         <div class="final-row uk-margin">
           <div>
             <div class="uk-form-label">Color</div>
-            <input id="batman-color-picker" type="color" />
+            <input id="color-picker" type="color" />
           </div>
           <div>
-            <button type="button" id="delete-character" class="uk-button uk-button-delete">Delete Character</button>
+            <button
+              type="button"
+              id="delete-character"
+              class="uk-button uk-button-delete"
+            >
+              Delete Work
+            </button>
           </div>
         </div>
       </form>
@@ -233,6 +95,7 @@
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/radar.js"></script>
+    <script src="js/editableGeneral.js"></script>
     <script src="js/editableBatman.js"></script>
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit.min.js"></script>

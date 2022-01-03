@@ -1,37 +1,3 @@
-// let container = document.querySelector(".body-container");
-// const data = {
-//     labels: [
-//       'Who tf Cares',
-//       'Stoic Broic',
-//       'Hates Superman',
-//       'Sean Hates',
-//       'Deeper Than He Seems',
-//       'Is Main Character of Critically Acclaimed Series',
-//       'Dead Inside'
-//     ],
-//     datasets: [{
-//       label: 'The Batman',
-//       data: [65, 95, 30, 81, 56, 55, 40],
-//       fill: true,
-//       backgroundColor: 'rgba(255, 99, 132, 0.2)',
-//       borderColor: 'rgb(255, 99, 132)',
-//       pointBackgroundColor: 'rgb(255, 99, 132)',
-//       pointBorderColor: '#fff',
-//       pointHoverBackgroundColor: '#fff',
-//       pointHoverBorderColor: 'rgb(255, 99, 132)'
-//     }, {
-//       label: 'Kiji',
-//       data: [50, 30, 2, 19, 30, 5, 80],
-//       fill: true,
-//       backgroundColor: 'rgba(54, 162, 235, 0.2)',
-//       borderColor: 'rgb(54, 162, 235)',
-//       pointBackgroundColor: 'rgb(54, 162, 235)',
-//       pointBorderColor: '#fff',
-//       pointHoverBackgroundColor: '#fff',
-//       pointHoverBorderColor: 'rgb(54, 162, 235)'
-//     }]
-//   };
-
 let container = document.querySelector(".body-container");
 const data = {
   labels: [

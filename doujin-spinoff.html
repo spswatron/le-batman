@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8" />
-    <title>Editable Doujin</title>
+    <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -31,7 +31,7 @@
       href="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/css/uikit.min.css"
     />
     <link rel="stylesheet" href="css/template.css" />
-    <link rel="stylesheet" href="css/doujin.css" />
+    <link rel="stylesheet" href="css/editable.css" />
   </head>
 
   <body>
@@ -52,14 +52,14 @@
       </div>
       <form class="uk-form-stacked characters-editable">
         <div class="uk-margin">
-          <label class="uk-form-label" for="character-select">Work</label>
+          <label class="uk-form-label" for="character-select">Character</label>
           <div class="uk-form-controls">
             <select class="uk-select" value="0" id="character-select"></select>
           </div>
         </div>
 
         <div class="uk-margin">
-          <label class="uk-form-label" for="character-name">Title</label>
+          <label class="uk-form-label" for="character-name">Name</label>
           <div class="uk-form-controls">
             <input
               class="uk-input"
@@ -70,111 +70,21 @@
           </div>
         </div>
 
-        <div class="uk-margin">
-          <label class="uk-form-label" for="form-stacked-text"
-            >Average Vibes</label
-          >
-          <div class="range-combo uk-form-controls">
-            <input
-              class="uk-range"
-              id="average-score"
-              type="range"
-              min="0"
-              max="10"
-              step="0.1"
-            />
-            <input
-              id="average-num"
-              class="uk-input uk-form-width-mini"
-              type="number"
-              min="0"
-              max="10"
-              step="0.5"
-            />
-          </div>
-        </div>
-
-        <div class="uk-margin">
-          <label class="uk-form-label" for="form-stacked-text"
-            >Worst Doujin</label
-          >
-          <div class="range-combo uk-form-controls">
-            <input
-              class="uk-range"
-              id="worst-score"
-              type="range"
-              min="0"
-              max="10"
-              step="0.1"
-            />
-            <input
-              id="worst-num"
-              class="uk-input uk-form-width-mini"
-              type="number"
-              min="0"
-              max="10"
-              step="0.5"
-            />
-          </div>
-        </div>
-
-        <div class="uk-margin">
-          <label class="uk-form-label" for="form-stacked-text"
-            >Best! Doujin!</label
-          >
-          <div class="range-combo uk-form-controls">
-            <input
-              class="uk-range"
-              id="best-score"
-              type="range"
-              value="2"
-              min="0"
-              max="10"
-              step="0.1"
-            />
-            <input
-              id="best-num"
-              class="uk-input uk-form-width-mini"
-              type="number"
-              min="0"
-              max="10"
-              step="0.5"
-            />
-          </div>
-        </div>
-
-        <div class="uk-margin">
-          <label class="uk-form-label" for="form-stacked-text"
-            >Le Canon Quality</label
-          >
-          <div class="range-combo uk-form-controls">
-            <input
-              class="uk-range"
-              id="canon-score"
-              type="range"
-              value="2"
-              min="0"
-              max="10"
-              step="0.1"
-            />
-            <input
-              id="canon-num"
-              class="uk-input uk-form-width-mini"
-              type="number"
-              min="0"
-              max="10"
-              step="0.5"
-            />
-          </div>
-        </div>
+        <div id="field-container"></div>
 
         <div class="final-row uk-margin">
           <div>
             <div class="uk-form-label">Color</div>
-            <input id="batman-color-picker" type="color" />
+            <input id="color-picker" type="color" />
           </div>
           <div>
-            <button type="button" id="delete-character" class="uk-button uk-button-delete">Delete Work</button>
+            <button
+              type="button"
+              id="delete-character"
+              class="uk-button uk-button-delete"
+            >
+              Delete Work
+            </button>
           </div>
         </div>
       </form>
@@ -185,6 +95,7 @@
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/radar.js"></script>
+    <script src="js/editableGeneral.js"></script>
     <script src="js/editableDoujin.js"></script>
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit.min.js"></script>
