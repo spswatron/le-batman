@@ -141,6 +141,19 @@ const justNums = document.getElementById("justif-num");
 //get color picker
 const colorPicker = document.getElementById("batman-color-picker");
 
+const prevent = (e) => {
+  if (e.keyCode == 13) {
+    e.preventDefault();
+  }
+}
+fanbaseRange.addEventListener("keyup", prevent);
+brooderRange.addEventListener("keyup", prevent);
+righteousRange.addEventListener("keyup", prevent);
+brainRange.addEventListener("keyup", prevent);
+abrasiveRange.addEventListener("keyup", prevent);
+justRange.addEventListener("keyup", prevent);
+characterNameInput.addEventListener("keyup", prevent);
+
 const characterChange = (e) => {
   currIndex = Number.parseInt(e.target.value);
   setupCharacterSettings();
@@ -319,13 +332,10 @@ deleteCharacter.addEventListener("click", deleteClick);
 const downloadClick = (e) => {
   const radarCanvas = document.querySelector(".chartjs-render-monitor");
   ctx = radarCanvas.getContext("2d");
-
   // set the ctx to draw beneath your current content
   ctx.globalCompositeOperation = "destination-over";
-
   // set the fill color to white
   ctx.fillStyle = "white";
-
   // apply fill starting from point (0,0) to point (canvas.width,canvas.height)
   // these two points are the top left and the bottom right of the canvas
   ctx.fillRect(0, 0, radarCanvas.width, radarCanvas.height);
