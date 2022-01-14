@@ -19,6 +19,7 @@ const heather = new DataPoint("Heather", "rgb(54, 162, 235)", [
   70,
   80,
   65,
+  65,
   80,
   65,
 ]);
