@@ -1,29 +1,27 @@
 const fieldList = [
-  "Meanness",
-  "Expressiveness",
-  "Flawed-ness",
-  "Popularity",
-  "Compelling-ness",
-  "Chaos",
+  "RUTHLESSNESS",
+  "EQ",
+  "Idol Power",
+  "is mean.",
+  "S-rank Attractiveness Power-scaling",
+  "Crowd Control",
 ];
 
-const yuna = new DataPoint("Yuna", "rgb(255, 99, 132)", [
-  65,
-  59,
-  90,
-  81,
-  56,
-  55,
-  40,
-]);
-const ueno = new DataPoint("Ueno", "rgb(54, 162, 235)", [
-  28,
-  48,
-  40,
-  19,
-  27,
+const taylor = new DataPoint("Taylor Garland", "rgb(255, 99, 132)", [
+  30,
+  30,
   100,
+  30,
+  100,
+  90,
 ]);
-const characters = [yuna, ueno];
+const heather = new DataPoint("Heather", "rgb(54, 162, 235)", [
+  70,
+  80,
+  65,
+  80,
+  65,
+]);
+const characters = [taylor, heather];
 
 generalSetup("Mean Girlzz", fieldList, characters);
