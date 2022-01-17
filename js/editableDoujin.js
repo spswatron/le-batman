@@ -1,10 +1,3 @@
-// const fieldList = [
-//   "Average Vibes",
-//   "Worst Doujin",
-//   "Best! Doujin",
-//   "Le Canon Quality",
-// ];
-
 const fieldList = [
   "Average Vibes",
   "Best! Doujin",
